@@ -7,6 +7,15 @@ def main():
                       'Server=DESKTOP-LQFETQU\SQLEXPRESS;'
                       'Database=prueba;'
                       'Trusted_Connection=yes;')
+
+#     connection = pyodbc.connect(
+#     "Driver={"SQL Driver"};"
+#     "Server= "ServerName";"
+#     "Database="DatabaseName";"
+#     "UID="UserName";"
+#     "PWD="Password";"
+#     "Trusted_Connection=yes"
+# )
     #cursor = conn.cursor()
     #ufData = cursor.execute('SELECT PersonID FROM dbo.Table_prueba Where PersonID = 2')
     array = pd.read_sql_query('SELECT PersonID,LastName,FirstName,Address,City FROM dbo.Table_prueba', conn)
